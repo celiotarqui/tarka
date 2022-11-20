@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" type="text/css" href="css/jqpuzzle.css" />
+        <script type="text/javascript" src="js/jquery-1.7.2.js"></script>
+        <script type="text/javascript" src="js/jquery.jqpuzzle.js"></script>
+        <script type="text/javascript">
+            //Rutas a imagenes que se cargaran al azar.
+            var imagenes = new Array(
+                'CPU/tarka.jpg'//,
+		//'monitor/monitor2.jpg',
+		//'monitor/monitor3.jpg'
+            );
+            //Guarda la ruta de una imagen al azar.
+            var azar = Math.floor((Math.random() * imagenes.length) + 0);
+            var imagen = imagenes[azar];
+            //Seteos del rompecabezas.
+            var settings = {
+                shuffle: true,
+                control: {
+                    shufflePieces: true, // display 'Shuffle' button [true|false] 
+                    confirmShuffle: false, // ask before shuffling [true|false] 
+                    toggleOriginal: true, // display 'Original' button [true|false] 
+                    toggleNumbers: true, // display 'Numbers' button [true|false] 
+                    counter: true, // display moves counter [true|false] 
+                    timer: true, // display timer (seconds) [true|false] 
+                    pauseTimer: false
+                }
+            };
+            //Textos que mostraran el rompecabezas.
+            var myTexts = {
+                shuffleLabel: 'Chhaxruña',
+                toggleOriginalLabel: 'Qallta Untaña',
+                toggleNumbersLabel: 'Jakhunaka',
+                confirmShuffleMessage: 'Desea mezclar la imagen?',
+                movesLabel: 'Unuqiri',
+                secondsLabel: 'Pacha'
+            };
+            $(document).ready(function() {
+                $("#rompecabezas").attr('src', imagen);
+                $("#rompecabezas").jqPuzzle(settings, myTexts);
+            });
+
+        </script>
+    </head>
+    <body background ="cpu/pasted.png">
+      <center>
+	<table border>
+	<tr><th><IMG SRC ="cpu/escudonormal.png" windth =100 height = 100 ></th><th colspan=2 bgcolor="#ff24ff"><marquee><h1><u>TARKA - - APTHAPIÑA</h1></marquee></th></tr>
+		<th align=top>
+		<p><H3><I><U><blink>AKHAMA</blink></U></I></p> 
+		<IMG SRC ="cpu/tarka.jpg" windth =300 height = 300 >
+		<P>Aka tarkax, tarkapa satawa</P>
+		<P><H1><A HREF="file:///C:/Users/Celio/Desktop/ROMPECABEZA/pagcenter.html"><font color="#ff0000">KUTIQTAÑA</font></A></H1></P>
+		</th>
+		
+		<th>
+		<center>
+		
+        		<img id="rompecabezas" src="" alt="" class="jqPuzzle" />
+		</center>
+		</th>
+	</tr>
+	</table>
+	</center>
+    </body>
+</html>
